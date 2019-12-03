@@ -1,12 +1,13 @@
-function title {
-    echo -ne "\033]0;"$*"\007"
-}
+# Doesn't work with iTerm2 any more as of Dec 2019
+#function title {
+#    echo -ne "\033]0;"$*"\007"
+#}
 set -o vi
 set -uo pipefail
 
 # unbound variable in iterm2
 # see https://iterm2.com/shell_integration/bash
-export __bp_enable_subshells=true
+#export __bp_enable_subshells=true
 
 __prompt_command() {
     local EXIT="$?"             # This needs to be first
