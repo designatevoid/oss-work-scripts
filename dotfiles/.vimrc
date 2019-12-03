@@ -1,2 +1,9 @@
 " comment: dummy placeholder file
-" want to add line numbers and paste-mode key shortcut
+" want to add paste-mode key shortcut
+
+" Add linenumbers
+set number
+
+" Copy ./.vim to ~/.vim to install badwolf
+syntax on
+colorscheme badwolf
