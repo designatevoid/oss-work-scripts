@@ -22,3 +22,10 @@ antigen apply
 export RPROMPT="<%d"
 # VI mode editing on command prompt
 bindkey -v
+
+# better history selection with https://github.com/zsh-users/zsh-history-substring-search
+plugins=(history-substring-search)
+source ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
