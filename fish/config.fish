@@ -11,3 +11,11 @@ set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 ## brew
 set -gx BREW_HOME /opt/homebrew
 fish_add_path $BREW_HOME/bin
+
+## company specific
+set COMPANY ~/.config/fish/company.fish
+if [ -e $COMPANY ]
+  source $COMPANY
+else
+  echo $COMPANY not found, not included
+end
