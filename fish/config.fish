@@ -12,6 +12,11 @@ set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 set -gx BREW_HOME /opt/homebrew
 fish_add_path $BREW_HOME/bin
 
+# bin
+set -Ux OSS_BIN ~/dev/oss/oss-work-scripts/bin
+fish_add_path $OSS_BIN
+fish_add_path ~/bin
+
 ## company specific
 set COMPANY ~/.config/fish/company.fish
 if [ -e $COMPANY ]

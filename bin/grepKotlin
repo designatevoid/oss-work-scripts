@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Runs a recursive egrep on all kotlin files in the current directory.
+
+if [[ -z "$1" ]]; then
+  echo "Search term required"
+  exit 1;
+fi
+
+echo "Searching current directory and subdirectories.  Not searching subdirectories named build, out, or gen."
+echo
+
+grep --color=auto -E -rI --exclude-dir={build,out,gen} --include "*.kt" "$1" "${2:-.}"

@@ -1,0 +1,5 @@
+#!/usr/bin/env fish
+
+sudo chown -R (whoami) /usr/local/bin
+brew $argv
+sudo chown root /usr/local/bin
