@@ -1,0 +1,34 @@
+#!/usr/bin/env fish
+
+#####
+# Runs a recursive egrep on all kotlin files in the current directory.
+#####
+
+# supporting functions
+function print_help
+  echo "realer help"
+end
+
+#####
+
+# guard
+if [ -z "$argv[1]" ]
+  echo "Search term required"
+  print_help
+  exit 1
+end
+
+# opts
+argparse h/help -- $argv
+if set -q _flag_help
+  print_help
+  return 0
+end
+
+#####
+
+# body
+echo "Searching current directory and relevant subdirectories."
+echo
+
+grep --color=auto -E -rI --exclude-dir={build,out,gen} --include "*.java" "$argv[1]" .
