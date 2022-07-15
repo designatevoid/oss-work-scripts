@@ -9,13 +9,19 @@ set -Ux LSCOLORS gxfxbEaEBxxEhEhBaDaCaD
 # iterm2 -> Preferences -> Profiles -> Colors -> Background to choose BG color
 
 ## brew
-set -gx BREW_HOME /opt/homebrew
+set -Ux BREW_HOME /opt/homebrew
 fish_add_path $BREW_HOME/bin
+set -Ux MAVEN_HOME /opt/homebrew/Cellar/maven/3.8.6/
+set -Ux M2_HOME $MAVEN_HOME
 
 # bin
 set -Ux OSS_BIN ~/dev/oss/oss-work-scripts/bin
 fish_add_path $OSS_BIN
 fish_add_path ~/bin
+
+# other defines
+set -Ux FISH_CONFIG_PATH ~/.config/fish/config.fish
+set -Ux OSS_HOME ~/dev/oss
 
 ## company specific
 set COMPANY ~/.config/fish/company.fish

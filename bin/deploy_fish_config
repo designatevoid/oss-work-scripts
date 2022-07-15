@@ -1,0 +1,3 @@
+#!/usr/bin/env fish
+
+cp $OSS_HOME/oss-work-scripts/fish/config.fish $FISH_CONFIG_PATH
