@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# Creates a popup dialog box from the command line
+# This is used to notify the programmer when a command line command has completed
+# Example usage: poetry run intg && ok_popup
+
+# Optional single argument is text to display in dialog box.  Default is "Command complete"
+# OSX only
+
+osascript -e "tell application \"System Events\" to display dialog \"${1:-Command complete}\" buttons {\"OK\"} with icon note" &>/dev/null &
