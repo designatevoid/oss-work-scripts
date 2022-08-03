@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+
+# suppress spurious errors
+git difftool -y 2>&1 | egrep -v "is implemented in both"
