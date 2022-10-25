@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# The classic 'Press any key to continue' prompt
+
+# -p prompt
+# -r disable escaping so '\t' is a literal '\t' and not a tab
+press-any-key() {
+  read -p "Press any key to continue..." -n 1 -s -r
+  echo
+}
